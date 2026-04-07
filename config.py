@@ -1,0 +1,49 @@
+import os
+
+API_KEY = os.getenv("API_KEY")
+API_SECRET = os.getenv("API_SECRET")
+
+NIFTY_TOKEN = 256265
+NIFTY_EXCHANGE = "NSE"
+NIFTY_SYMBOL = "NIFTY 50"
+OPTIONS_EXCHANGE = "NFO"
+
+STRIKES_ABOVE_ATM = 20
+STRIKES_BELOW_ATM = 20
+STRIKE_GAP = 50
+CANDLE_INTERVAL = 3
+
+RISK_FREE_RATE = 0.07
+
+EXCEL_OUTPUT = "dashboard.xlsx"
+PATTERN_FILE = "patterns.json"
+DAILY_LOG = "daily_data"
+
+MAX_MEMORY_MB = 300
+PATTERN_DECAY_DAYS = 365
+MIN_HIT_RATE = 0.52
+MIN_PATTERN_MATCHES = 5
+PATTERN_MIN_MOVE = 8.0
+PATTERN_STEP = 3
+PATTERN_MATCH_THRESHOLD = 0.55
+
+KALMAN_PROCESS_NOISE = 1.0
+KALMAN_MEASUREMENT_NOISE = 2.0
+
+PCA_MIN_SNAPSHOTS = 8
+TE_MIN_SNAPSHOTS = 12
+TE_RETURN_THRESHOLD = 0.0002
+
+REGIME_SMOOTHING_ALPHA = 0.3
+
+VOTER_WEIGHTS = {
+    "pattern": 1.0,
+    "momentum": 1.2,
+    "cycle": 0.8,
+    "hurst": 1.0,
+    "oi": 1.2,
+    "iv_dist": 1.2,
+    "smart_money": 1.5,
+    "regime": 1.0,
+    "entropy": 1.0
+}
